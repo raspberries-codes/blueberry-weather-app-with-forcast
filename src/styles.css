@@ -78,6 +78,36 @@ input {
   margin-top: 16px;
   font-size: 28px;
 }
+.forcastWeather {
+  display: flex;
+  justify-content: space-around;
+}
+
+.forcastDay {
+  color: rgba(39, 33, 66, 0.4);
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+.forcastEmoji {
+  text-align: center;
+  width: 38px;
+  margin-bottom: 10px;
+}
+.maxAndMinTemperature {
+  display: flex;
+}
+.weatherForcastMax {
+  text-align: center;
+  color: #f65282;
+  margin-bottom: 80px;
+  display: flex;
+  justify-content: center;
+}
+.weatherForcastMin {
+  padding: 0 10px;
+  color: #f65282;
+}
 footer {
   border-top: 1px solid rgb(230, 118, 228, 0.6);
   padding: 30px 0px 20px 0px;
