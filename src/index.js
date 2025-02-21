@@ -48,3 +48,23 @@ let formInput = document.querySelector("#weather-form");
 formInput.addEventListener("submit", updateCity);
 
 cityInputDetails("gothenburg");
+
+function forcastWeather() {
+  let days = ["Sat", "Sun", "Mon", "Tues", "Wed"];
+  let forcastHtml = "";
+  days.forEach(function (days) {
+    forcastHtml =
+      forcastHtml +
+      `<div class="dailyForcast">
+            <div class="forcastDay">${days}</div>
+            <div class="forcastEmoji">🌦️</div>
+            <div class="maxAndMinTemperature">
+              <div class="weatherForcastMax"><strong>20º</strong></div>
+              <div class="weatherForcastMin">15º</div>
+            </div>`;
+  });
+
+  let ForcastDetails = document.querySelector("#forcast-weather");
+  ForcastDetails.innerHTML = forcastHtml;
+}
+forcastWeather();

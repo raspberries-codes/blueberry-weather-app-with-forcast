@@ -80,10 +80,11 @@ input {
 }
 .forcastWeather {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .dailyForcast {
-  display: block;
+  display: flex;
+  justify-content: space-around;
   margin-bottom: 10px;
 }
 
