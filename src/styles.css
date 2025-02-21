@@ -82,6 +82,10 @@ input {
   display: flex;
   justify-content: space-around;
 }
+.dailyForcast {
+  display: block;
+  margin-bottom: 10px;
+}
 
 .forcastDay {
   color: rgba(39, 33, 66, 0.4);
@@ -91,8 +95,9 @@ input {
 }
 .forcastEmoji {
   text-align: center;
-  width: 38px;
-  margin-bottom: 10px;
+  width: 50px;
+  margin-bottom: 50px;
+  margin-top: 50px;
 }
 .maxAndMinTemperature {
   display: flex;
