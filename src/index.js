@@ -28,6 +28,7 @@ function updateTemperature(response) {
   }
   let realTime = document.querySelector("#dayTime");
   realTime.innerHTML = `${day} ${hour}:${minutes}`;
+  getForcast(response.data.city);
 }
 
 function cityInputDetails(City) {
@@ -68,5 +69,13 @@ function forcastWeather() {
 
   let ForcastDetails = document.querySelector("#forcast-weather");
   ForcastDetails.innerHTML = forcastHtml;
+}
+function getForcast(city) {
+  let forcastKey = "da7a1b3d460dbtbf7b304o1bb99604f1";
+  let forcastApiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${forcastKey}&units=metric`;
+  axios(forcastApiUrl).then(displayForcast);
+}
+function displayForcast(response) {
+  console.log(response.data);
 }
 forcastWeather();
