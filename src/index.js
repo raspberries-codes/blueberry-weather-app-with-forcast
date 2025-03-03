@@ -50,21 +50,35 @@ formInput.addEventListener("submit", updateCity);
 
 cityInputDetails("gothenburg");
 
-function forcastWeather() {
-  let days = ["Sat", "Sun", "Mon", "Tues", "Wed"];
-  let forcastHtml = "";
-  days.forEach(function (days) {
-    forcastHtml =
-      forcastHtml +
-      `<div class="dailyForcast">
-            <div class="forcastDay">${days}</div>
+function realDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  days = ["sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
+  return days[date.getDay()];
+}
 
-            <div class="forcastEmoji">🌦️</div>
+function forcastWeather(response) {
+  console.log(response.data);
+  let forcastHtml = "";
+  response.data.daily.forEach(function (day, index) {
+    if (index < 5) {
+      forcastHtml =
+        forcastHtml +
+        `<div class="dailyForcast">
+            <div class="forcastDay">${realDay(day.time)}</div>
+
+            <div ><img class="forcastEmoji" src="${
+              day.condition.icon_url
+            }"/></div>
             <div class="maxAndMinTemperature">
-              <div class="weatherForcastMax"><strong>20º</strong></div>
-              <div class="weatherForcastMin">15º</div>
+              <div class="weatherForcastMax"><strong>${Math.round(
+                day.temperature.maximum
+              )}º</strong></div>
+              <div class="weatherForcastMin">${Math.round(
+                day.temperature.minimum
+              )}º</div>
             </div>
           </div>`;
+    }
   });
 
   let ForcastDetails = document.querySelector("#forcast-weather");
@@ -73,9 +87,7 @@ function forcastWeather() {
 function getForcast(city) {
   let forcastKey = "da7a1b3d460dbtbf7b304o1bb99604f1";
   let forcastApiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${forcastKey}&units=metric`;
-  axios(forcastApiUrl).then(displayForcast);
+  axios(forcastApiUrl).then(forcastWeather);
 }
-function displayForcast(response) {
-  console.log(response.data);
-}
-forcastWeather();
+
+forcastWeather(response);
