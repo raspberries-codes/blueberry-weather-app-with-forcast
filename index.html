@@ -4,6 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blueberry-weather-app</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="src/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,68 +25,72 @@
     <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
   </head>
   <body>
-    <h1>Blueberry-weather-app</h1>
+    <div class="container">
+      <div class="row">
+        <h1>Blueberry-weather-app</h1>
 
-    <div class="weatherAppArea">
-      <header>
-        <form id="weather-form">
-          <input
-            type="search"
-            placeholder="Enter city"
-            required
-            class="enterCityArea"
-            id="enter-city"
-          />
-          <input
-            type="submit"
-            value="search"
-            class="submitButton"
-            id="submit-button"
-          />
-        </form>
-      </header>
-      <main>
-        <div class="weatherAppContent">
-          <div>
-            <h3 class="weatherAppCity" id="weather-app-city">Gothenburg</h3>
-            <p class="weatherAppDate">
-              <span id="dayTime">Monday 19:22</span>,<span
-                id="weather-description"
-                >moderate rain</span
-              >
-            </p>
-            <p class="weatherAppHumidity">
-              Humidity: <strong id="Humidity">87%</strong>, Wind:
-              <strong id="speed">7.2km/h</strong>
-            </p>
-          </div>
-          <div class="weatherAppTemperature">
-            <div id="weather-Emoji"></div>
-            <div class="temperature" id="tempEntered"></div>
-            <div class="temperatureUnit">℃</div>
-          </div>
+        <div class="weatherAppArea col-sm">
+          <header>
+            <form id="weather-form">
+              <input
+                type="search"
+                placeholder="Enter city"
+                required
+                class="enterCityArea"
+                id="enter-city"
+              />
+              <input
+                type="submit"
+                value="search"
+                class="submitButton"
+                id="submit-button"
+              />
+            </form>
+          </header>
+          <main>
+            <div class="weatherAppContent">
+              <div>
+                <h3 class="weatherAppCity" id="weather-app-city">Gothenburg</h3>
+                <p class="weatherAppDate">
+                  <span id="dayTime">Monday 19:22</span>,<span
+                    id="weather-description"
+                    >moderate rain</span
+                  >
+                </p>
+                <p class="weatherAppHumidity">
+                  Humidity: <strong id="Humidity">87%</strong>, Wind:
+                  <strong id="speed">7.2km/h</strong>
+                </p>
+              </div>
+              <div class="weatherAppTemperature">
+                <div id="weather-Emoji"></div>
+                <div class="temperature" id="tempEntered"></div>
+                <div class="temperatureUnit">℃</div>
+              </div>
+            </div>
+            <div class="forcastWeather" id="forcast-weather"></div>
+          </main>
+
+          <footer>
+            Coded by
+            <a href="https://github.com/Lonpsy" target="_blank"
+              ><small> Olalonpe Faith Festus-Ilesanmi</small></a
+            >
+
+            <a href="https://github.com/Lonpsy?tab=repositories" target="_blank"
+              ><small>Open sourced on github</small>
+            </a>
+
+            hosted on
+            <a
+              href="https://blueberry-weather-forcast-app.netlify.app/"
+              target="_blank"
+              ><small> Netlify</small></a
+            >
+          </footer>
         </div>
-        <div class="forcastWeather" id="forcast-weather"></div>
-      </main>
-
-      <footer>
-        Coded by
-        <a href="https://github.com/Lonpsy" target="_blank"
-          ><small> Olalonpe Faith Festus-Ilesanmi</small></a
-        >
-
-        <a href="https://github.com/Lonpsy?tab=repositories" target="_blank"
-          ><small>Open sourced on github</small>
-        </a>
-
-        hosted on
-        <a
-          href="https://blueberry-weather-forcast-app.netlify.app/"
-          target="_blank"
-          ><small> Netlify</small></a
-        >
-      </footer>
+      </div>
+      <script src="src/index.js"></script>
     </div>
-    <script src="src/index.js"></script>
   </body>
 </html>
