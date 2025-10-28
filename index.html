@@ -25,7 +25,7 @@
     <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
   </head>
   <body>
-    <div class="container">
+    <div class="container-fluid">
       <div class="row">
         <div class="col-sm mt-5">
           <h1>Blueberry-weather-app</h1>
@@ -69,12 +69,17 @@
                 <div class="weatherAppTemperature row">
                   <div class="col-sm-3" id="weather-Emoji"></div>
 
-                  <div class="temperature col-sm-3 p-4" id="tempEntered"></div>
+                  <div
+                    class="temperature col-sm-3 p-4 d-inline"
+                    id="tempEntered"
+                  ></div>
                   <div class="temperatureUnit col-sm-3 p-2">℃</div>
                 </div>
               </div>
 
-              <div class="forcastWeather" id="forcast-weather"></div>
+              <div class="container-fluid">
+                <div class="forcastWeather" id="forcast-weather"></div>
+              </div>
             </main>
 
             <footer>
