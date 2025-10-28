@@ -27,70 +27,77 @@
   <body>
     <div class="container">
       <div class="row">
-        <h1>Blueberry-weather-app</h1>
+        <div class="col-sm">
+          <h1>Blueberry-weather-app</h1>
 
-        <div class="weatherAppArea col-sm">
-          <header>
-            <form id="weather-form">
-              <input
-                type="search"
-                placeholder="Enter city"
-                required
-                class="enterCityArea"
-                id="enter-city"
-              />
-              <input
-                type="submit"
-                value="search"
-                class="submitButton"
-                id="submit-button"
-              />
-            </form>
-          </header>
-          <main>
-            <div class="weatherAppContent">
-              <div>
-                <h3 class="weatherAppCity" id="weather-app-city">Gothenburg</h3>
-                <p class="weatherAppDate">
-                  <span id="dayTime">Monday 19:22</span>,<span
-                    id="weather-description"
-                    >moderate rain</span
-                  >
-                </p>
-                <p class="weatherAppHumidity">
-                  Humidity: <strong id="Humidity">87%</strong>, Wind:
-                  <strong id="speed">7.2km/h</strong>
-                </p>
+          <div class="weatherAppArea">
+            <header>
+              <form id="weather-form">
+                <input
+                  type="search"
+                  placeholder="Enter city"
+                  required
+                  class="enterCityArea"
+                  id="enter-city"
+                />
+                <input
+                  type="submit"
+                  value="search"
+                  class="submitButton"
+                  id="submit-button"
+                />
+              </form>
+            </header>
+            <main>
+              <div class="weatherAppContent">
+                <div>
+                  <h3 class="weatherAppCity" id="weather-app-city">
+                    Gothenburg
+                  </h3>
+                  <p class="weatherAppDate">
+                    <span id="dayTime">Monday 19:22</span>,<span
+                      id="weather-description"
+                      >moderate rain</span
+                    >
+                  </p>
+                  <p class="weatherAppHumidity">
+                    Humidity: <strong id="Humidity">87%</strong>, Wind:
+                    <strong id="speed">7.2km/h</strong>
+                  </p>
+                </div>
+                <div class="weatherAppTemperature">
+                  <div id="weather-Emoji"></div>
+                  <div class="temperature" id="tempEntered"></div>
+                  <div class="temperatureUnit">℃</div>
+                </div>
               </div>
-              <div class="weatherAppTemperature">
-                <div id="weather-Emoji"></div>
-                <div class="temperature" id="tempEntered"></div>
-                <div class="temperatureUnit">℃</div>
-              </div>
-            </div>
-            <div class="forcastWeather" id="forcast-weather"></div>
-          </main>
+              <div class="forcastWeather" id="forcast-weather"></div>
+            </main>
 
-          <footer>
-            Coded by
-            <a href="https://github.com/Lonpsy" target="_blank"
-              ><small> Olalonpe Faith Festus-Ilesanmi</small></a
-            >
+            <footer>
+              Coded by
+              <a href="https://github.com/Lonpsy" target="_blank"
+                ><small> Olalonpe Faith Festus-Ilesanmi</small></a
+              >
 
-            <a href="https://github.com/Lonpsy?tab=repositories" target="_blank"
-              ><small>Open sourced on github</small>
-            </a>
+              <a
+                href="https://github.com/Lonpsy?tab=repositories"
+                target="_blank"
+                ><small>Open sourced on github</small>
+              </a>
 
-            hosted on
-            <a
-              href="https://blueberry-weather-forcast-app.netlify.app/"
-              target="_blank"
-              ><small> Netlify</small></a
-            >
-          </footer>
+              hosted on
+              <a
+                href="https://blueberry-weather-forcast-app.netlify.app/"
+                target="_blank"
+                ><small> Netlify</small></a
+              >
+            </footer>
+          </div>
+
+          <script src="src/index.js"></script>
         </div>
       </div>
-      <script src="src/index.js"></script>
     </div>
   </body>
 </html>
