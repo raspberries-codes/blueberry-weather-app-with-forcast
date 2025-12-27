@@ -108,3 +108,19 @@ footer {
   text-align: center;
   color: rgba(64, 58, 64, 0.6);
 }
+
+@media (max-width: 600px) {
+  .forcastWeather {
+    flex-wrap: wrap;
+  }
+
+  .weatherAppCity {
+    font-size: 28px;
+    line-height: 36px;
+    margin: 5px;
+  }
+  .temperatureUnit {
+    margin-top: 12px;
+    font-size: 86px;
+  }
+}
